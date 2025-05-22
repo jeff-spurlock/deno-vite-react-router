@@ -6,6 +6,7 @@
     "serve": "deno run --allow-net --allow-read jsr:@std/http@1/file-server dist/",
     "api": "deno run --allow-net api/server.ts"
   },
+  "nodeModulesDir": true,
   "compilerOptions": {
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
@@ -15,6 +16,8 @@
   "imports": {
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.4",
     "@tailwindcss/vite": "npm:@tailwindcss/vite@^4.1.7",
+    "@tanstack/eslint-plugin-query": "npm:@tanstack/eslint-plugin-query@^5.74.7",
+    "@tanstack/react-query": "npm:@tanstack/react-query@^5.76.2",
     "@types/react": "npm:@types/react@^19.0.10",
     "@types/react-dom": "npm:@types/react-dom@^19.0.4",
     "@vitejs/plugin-react-swc": "npm:@vitejs/plugin-react-swc@^3.8.0",
