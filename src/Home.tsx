@@ -1,14 +1,16 @@
-import { useEffect, useState } from "react";
-import './App.css'
+import React, { useEffect, useState } from "react";
 
-function App() {
+function Home() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
-    fetch('/api/items')
+    fetch('/api/example-route')
       .then(response => response.json())
       .then(data => setData(data.items))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
 
   return (
     <>
@@ -18,4 +20,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

@@ -1,3 +1,4 @@
+import React from "react";
 import { Link, Outlet } from "react-router";
 
 export default function RootLayout() {
@@ -5,7 +6,7 @@ export default function RootLayout() {
     <div>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/login">Login</Link>
+        <Link to="/example">Example</Link>
       </nav>
       <Outlet />
     </div>

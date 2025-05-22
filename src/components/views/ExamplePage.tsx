@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function Login() {
+export default function ExamplePage() {
   const [data, setData] = useState<any>(null);
   useEffect(() => {
-    fetch('/api/test-data', {
+    fetch('/api/example-route', {
       method: 'POST',
-      body: JSON.stringify({ name: 'John', value: 48 }),
+      body: JSON.stringify({ name: 'John', value: 50 }),
     })
       .then(response => response.json())
       .then(data => setData(data))
