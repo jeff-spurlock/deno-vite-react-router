@@ -6,7 +6,7 @@ function App() {
   useEffect(() => {
     fetch('/api/items')
       .then(response => response.json())
-      .then(data => setData(data))
+      .then(data => setData(data.items))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
 
