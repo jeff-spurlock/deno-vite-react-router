@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  postgres:
+    build: .
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=devirr
+      - POSTGRES_USER=devirr
+      - POSTGRES_PASSWORD=devirr123
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devirr"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data: 
