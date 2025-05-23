@@ -12,7 +12,7 @@ export default function Router() {
           {navigationConfig.routes.map((route) => {
             const Component = route.component === "Home" 
               ? Home 
-              : React.lazy(() => import(`./components/views/${route.component}`));
+              : React.lazy(() => import(`./components/views/${route.component}.tsx`));
             
             return (
               <Route 
